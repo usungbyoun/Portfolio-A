@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  {% extends '_base.html' %}
+  {% load static %}
+  {% block head %}
+    <link rel="stylesheet" href="{% static 'splide/splide.css' %}">
+
+  {% endblock %}
+</head>
+<body>
+{% block base_content %}
+  {% include 'nav.html' %}
+
+  {% block content %}{% endblock %}
+
+   <script src="{% static 'splide/splide.js' %}"></script>
+  <script>
+    const elms = document.getElementsByClassName('splide');
+    for (let i = 0; i < elms.length; i++) {
+        new Splide(elms[i]).mount();
+        }
+  </script>
+{% endblock %}
+</body>
+</html>

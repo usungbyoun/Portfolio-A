@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base_nav.html' %}
+{% block content %}
+<main class="profile-main">
+
+    <div class="info_div">
+        <!-- 프로필 이미지 영역 -->
+
+
+        <!-- 사용자 정보 영역 -->
+            <div class="profile_info_class">
+             {% if user.profile_image %}
+            <img src="{{ user.profile_image.url }}" id="user_image_id">
+            {% endif %}
+                <div id="username_id">{{ user.username }} </div>
+                </div>
+
+
+   <div class="users_profile_info">
+             <a href="{% url 'users:profile' user_id=user.id %}">
+      Posts {{ user.post_set.count }}</a>
+</div>
+
+   <div class="users_profile_info">
+          <a href="{% url 'users:followers' user_id=user.id %}">
+     Followers {{ user.followers.count }}</a>
+     </div>
+
+     <div class="users_profile_info">
+           <a href="{% url 'users:following' user_id=user.id %}">
+     Following {{ user.following.count }}</a>
+       </div>
+
+
+            <p>{{ user.short_description }}</p>
+    </div>
+
+    {% block bottom_data %}{% endblock %}
+</main>
+{% endblock %}
+</body>
+</html>

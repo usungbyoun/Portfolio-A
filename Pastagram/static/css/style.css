@@ -1,0 +1,324 @@
+/* post.html */
+.post-top-header {
+width: 40%; /* 원하는 크기로 조정 */
+height: 80px; /* 화면 높이만큼 설정 */
+margin: 0 auto;
+
+}
+.comment-content-class {
+  width: 93%;
+  height: 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px 20px 20px 20px;
+  position: relative;
+  margin: 0px 10px 0px 10px;
+
+}
+.content-button-class {
+  display: none;
+  width: 10%;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0px 15px 0px 0px;
+
+}
+
+.like-image-class {
+width: 18px;
+height: 17px;
+}
+
+/* nav.html */
+nav {
+    width: 270px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    border: solid #ddd;
+    border-width: 0px 1px 0px 0px ;
+
+}
+
+@font-face {
+    font-family: 'OG_Renaissance_Secret-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/OG_Renaissance_Secret-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+#main-name {
+    font-family: 'OG_Renaissance_Secret-Rg';
+    font-size: 40px;
+    font-weight: 650;
+margin: 0px 0px 0px 20px;
+
+}
+
+#ul-list-id{
+margin: 50px 0px 0px 10px;
+height: 70%;
+width: 90%;
+}
+#li-list-id{
+margin: 0px 0px 30px 0px;
+}
+.aside-list {
+font-size: 25px;
+font-weight: 400;
+
+}
+.aside-list-img {
+width: 25px;
+height: 25px;
+margin: 0px 15px 0px 0px;
+
+}
+
+/* post_add.html */
+#post-add-h2{
+margin: 10px 0px 0px 10px;
+font-height:500;
+}
+
+
+#temp {
+border: 2px solid black;
+height: 500px;
+}
+
+#btn-span {
+color: black;
+font-size: 15px;
+font-height: 550;
+white-space: nowrap;
+font-family: 'Lato', sans-serif;
+
+}
+.print-image {
+width: 200px;
+height: 200px;
+}
+.print-div {
+margin: 15px 5px;
+}
+
+
+#img_select_div {
+width: 300px;
+margin-left: 5px;
+}
+
+/* 이미지 가져오기 */
+.custom-img-btn {
+  width: 300px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  border: none;
+  background: rgb(181,204,228);
+  background: linear-gradient(0deg, rgba(181,204,228,1) 0%, rgba(181,204,228,1) 100%);
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+}
+.custom-img-btn:hover {
+    text-decoration: none;
+    color: #fff;
+    opacity: .7;
+
+}
+.custom-img-btn:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+
+.custom-img-btn:active{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@-webkit-keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
+
+/* 파일 선택 */
+#img_file_select {
+  display: none;
+}
+
+.file_custom_label {
+  cursor: pointer;
+    width: 580px;
+    height: 50px;
+  margin: 15px 0px 0px 5px;
+
+}
+
+
+.file_name {
+  overflow: hidden;
+  width: 180px;
+  height: 40px;
+  padding: 0px 10px;
+  margin: 5px 0px 0px 0px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 30px;
+  color: #111;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+    cursor: pointer;
+ }
+
+.file_btn {
+  width: 90px;
+  height: 40px;
+  margin: 5px 0px 0px 0px;
+  background: #8ab4f8;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+    float: left;
+    cursor: pointer;
+}
+
+input[type="file"]:focus-visible ~ .file_btn,
+.file_custom_label:hover .file_btn {
+  background: #3478db;
+}
+
+
+
+/* img_select.html */
+.select-main {
+margin-left: 300px;
+height: 100%;
+width: 60%;
+        position: absolute;
+
+}
+#img_frame {
+        position: absolute;
+top: 48px;
+}
+
+#search-input {
+border: 2px solid gray;
+border-radius: 10px;
+  height: 15px;
+  font-size: 15px;
+
+}
+#select-count {
+width: 70px;
+  margin-right: 10px;
+  margin-left: 5px;
+  height: 28px;
+border-radius: 10px;
+border: 2px solid gray;
+text-align: center;
+
+}
+#select-label {
+  margin-left: 10px;
+  font-size: 17px;
+}
+.pasing_url_btn {
+width: 50px;
+  height: 25px;
+border: 1px solid gray;
+border-radius: 10px;
+
+}
+
+.image-checkbox-label {
+    cursor: pointer;
+    margin: 3px;
+
+}
+#img_view {
+border-radius: 10px;
+
+}
+
+#img_view:hover {
+box-shadow: 2px 2px 3px 3px #ddd;
+}
+
+.search-form {
+        width: 500px;
+        height: 60px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+}
+
+.url_send {
+margin: 0 auto;
+width: 150px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+  height: 30px;
+border: 1px solid gray;
+
+border-radius: 10px;
+}
+
+/* 체크박스 */
+.image-checkbox-label {
+    position: relative;
+    display: inline-block;
+
+}
+.check-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.image-checkbox-label input:checked + .check-icon {
+    display: block;
+}
+.input-checkbox {
+position: absolute;
+left: -9999px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% extends 'base_nav.html' %}
+
+     {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+
+
+{% block content %}
+
+
+<main class="select-main">
+
+<div class="search-form">
+    <form method="POST">
+    {% csrf_token %}
+        <input id="search-input" name="keyword" type="text" placeholder="검색할 이미지 명" required>
+
+   <label for="select-count" id="select-label">이미지 개수</label>
+        <select name="cnt" id="select-count">
+            <option value="10"> 10
+            <option value="20" selected> 20
+            <option value="30"> 30
+            <option value="40"> 40
+            <option value="50"> 50
+            <option value="60"> 60
+    </select>
+    <button type="submit" class="pasing_url_btn">검색</button>
+    </form>
+</div>
+
+
+
+
+
+
+<div>
+<form id="imageForm" method="post" action="{% url 'posts:post_add' %}">
+        {% csrf_token %}
+        <button align="right" type="submit" class="url_send" onclick="submitImages()">선택된 이미지 전송</button>
+
+<div id="img_frame">
+    {% for img_url in img_url_list %}
+
+        <label class="image-checkbox-label">
+            <img src="{{ img_url }}" alt="x" width="200px" height="200px" id="img_view">
+            <input type="checkbox" class="input-checkbox" name="selectedImages" value="{{ img_url }}">
+<!--            <span class="check-icon" style="background: url('') no-repeat;"></span>-->
+            <img src="{% static 'image/check.png' %}" class="check-icon">
+        </label>
+
+    {% endfor %}
+</div>
+    <input type="hidden" name="keyword" value="{{ keyword }}">
+    </form>
+    </div>
+</main>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+{% endblock %}
+</body>
+</html>

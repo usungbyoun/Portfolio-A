@@ -1,0 +1,321 @@
+/* post.html */
+
+
+
+
+.comment-content-class {
+  width: 93%;
+  height: 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px 20px 20px 20px;
+  position: relative;
+  margin: 0px 10px 0px 10px;
+
+}
+.content-button-class {
+  display: none;
+  width: 10%;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0px 15px 0px 0px;
+
+}
+
+.like-image-class {
+width: 18px;
+height: 17px;
+}
+
+/* base-posts.html */
+
+.nav-posts-display{
+  display: inline-block;
+
+  width: 100%;
+  height: 100%;
+  align-items: center; 
+  background-color: rgb(240, 240, 240);
+
+}
+
+.posts-nav {
+  width: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    border: solid #ddd;
+    border-width: 0px 1px 0px 0px ;
+  position: fixed; 
+  float: left;
+  background-color: white;
+}
+
+.posts-base-container {
+  /* background:green; */
+  margin-top: 100px;
+  /* margin-left: auto; */
+  width: 80%; 
+  /* height: 100%;  */
+float: right;
+background-color: rgb(240, 240, 240);
+
+display: flex;
+justify-content: center; /* 수평 중앙 정렬 */
+align-items: center; 
+/* text-align: center;  */
+}
+
+
+@font-face {
+    font-family: 'OG_Renaissance_Secret-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/OG_Renaissance_Secret-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+#main-name {
+    font-family: 'OG_Renaissance_Secret-Rg';
+    font-size: 40px;
+    font-weight: 650;
+margin: 0px 0px 0px 20px;
+
+}
+
+#ul-list-id{
+margin: 50px 0px 0px 10px;
+height: 70%;
+width: 90%;
+}
+#li-list-id{
+margin: 0px 0px 30px 0px;
+}
+.aside-list {
+font-size: 25px;
+font-weight: 400;
+
+}
+.aside-list-img {
+width: 25px;
+height: 25px;
+margin: 0px 15px 0px 0px;
+
+}
+
+.profile-img {
+  width: 25px;
+  height: 25px;
+  margin: 0px 15px 0px 0px;
+  border-radius: 20px;
+  }
+
+/* post_add.html */
+#post-add-h2{
+margin: 10px 0px 0px 10px;
+font-weight:500;
+}
+
+
+#temp {
+border: 2px solid black;
+height: 500px;
+}
+
+
+
+#none-image-error {
+  font-size: 1rem;
+  font-weight: 600;
+  color: red;
+  margin: 10px 0px 0px 25px;
+}
+
+.print-image {
+width: 200px;
+height: 200px;
+}
+
+.print-div {
+margin: 15px 5px;
+}
+
+
+
+
+/* @-webkit-keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+} */
+
+
+/* 파일 선택 */
+.button-grid {
+  /* display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, max-content));
+  justify-content: center; */
+  text-align: center; 
+   /* align-items: start;  */
+   /* gap: 80px; */
+   display: inline-block;
+/* background-color: red; */
+   margin: 20px 0px 0px 0px;
+width: 100%;
+}
+
+#postAdd {
+  /* border: 1px solid white;
+border-radius: 10px;
+box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
+background-color: white; */
+}
+
+
+#searchButton {
+  float: left;
+
+}
+#fileButton {
+float: right;
+  
+}
+.image-select-button {
+  width: 40%;
+  height: 2.0rem;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+
+  background: rgb(100,170,240);
+  padding-top: 5px; 
+
+}
+.image-select-button:hover {
+  background: rgb(80,150,220);
+  }
+
+
+
+#img_file_select {
+  display: none;
+}
+
+
+
+.file-select-span {
+color: white;
+font-size: 1.1rem;
+font-weight: 600;
+}
+
+
+/* search_img.html */
+
+.select-main {
+/* margin-left: 300px; */
+height: 100%;
+width: 60%;
+        /* position: absolute; */
+
+}
+#img_frame {
+        position: absolute;
+top: 48px;
+}
+
+#search-input {
+border: 2px solid gray;
+border-radius: 10px;
+  height: 15px;
+  font-size: 15px;
+}
+
+#keyword-error{
+  font-size: 1rem;
+  font-weight: 600;
+  color: red;
+  margin: 5px 0px 0px 15px;
+  }
+
+#select-count {
+width: 70px;
+  margin-right: 10px;
+  margin-left: 5px;
+  height: 28px;
+border-radius: 10px;
+border: 2px solid gray;
+text-align: center;
+
+}
+#select-label {
+  margin-left: 10px;
+  font-size: 17px;
+}
+.pasing_url_btn {
+width: 50px;
+  height: 25px;
+border: 1px solid gray;
+border-radius: 10px;
+
+}
+
+.image-checkbox-label {
+    cursor: pointer;
+    margin: 3px;
+
+}
+#img_view {
+border-radius: 10px;
+
+}
+
+#img_view:hover {
+box-shadow: 2px 2px 3px 3px #ddd;
+}
+
+.search-form {
+        width: 500px;
+        height: 60px;
+        /* position: absolute; */
+        top: 5px;
+        left: 5px;
+}
+
+.url_send {
+  float: right;
+margin: 0 auto;
+width: 150px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+  height: 30px;
+border: 1px solid gray;
+
+border-radius: 10px;
+}
+
+/* 체크박스 */
+.image-checkbox-label {
+    position: relative;
+    display: inline-block;
+
+}
+.check-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.image-checkbox-label input:checked + .check-icon {
+    display: block;
+}
+.input-checkbox {
+position: absolute;
+left: -9999px;
+}

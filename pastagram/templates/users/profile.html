@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base-posts-profile.html' %}
+{% block bottom_data %}
+    <!-- 사용자가 작성한 Post 목록 -->
+    <div class="post-grid-container" id="aa">
+        {% for post in user.post_set.all %}
+            {% if post.postimage_set.first and post.postimage_set.first.photo %}
+                <div class="post-grid" id="bb">
+                    <a href="{% url 'posts:post_detail' post_id=post.id %}">
+                        <img src="{{ post.postimage_set.first.photo.url }}" alt="" id="posts_photo_id">
+                    </a>
+                </div>
+            {% endif %}
+        {% endfor %}
+</div>
+{% endblock %}
+</body>
+</html>

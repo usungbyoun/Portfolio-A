@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% extends 'base-posts.html' %}
+    <!-- <script>
+        // HTML 템플릿 태그를 사용하여 CSRF 토큰을 JavaScript 변수에 할당
+        var csrf_token = '{{ csrf_token }}';
+        var postAddUrl = '{% url 'posts:post_add' %}';
+    </script> -->
+
+     {% load static %}
+
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+
+</head>
+<body>
+
+
+{% block content %}
+
+
+<main class="select-main">
+
+<div class="search-form">
+    <form method="POST">
+    {% csrf_token %}
+        <input id="search-input" name="keyword" type="text" placeholder="검색할 이미지 명" required>
+        
+        <label for="select-count" id="select-label">이미지 개수</label>
+        <select name="cnt" id="select-count">
+            <option value="10"> 10
+            <option value="20" selected> 20
+            <option value="30"> 30
+            <option value="40"> 40
+            <option value="50"> 50
+            <option value="60"> 60
+    </select>
+    <button type="submit" class="pasing_url_btn">검색</button>
+    {% if error_message %}
+    <p id="keyword-error">{{ error_message }}</p>
+    {% endif %}
+
+    </form>
+
+</div>
+
+
+
+
+
+
+</main>
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+{% endblock %}
+</body>
+</html>

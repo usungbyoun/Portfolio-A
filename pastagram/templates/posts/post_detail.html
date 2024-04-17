@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base-posts.html' %}
+{% block content %}
+<div id="feeds" class="post-container">
+    {% url 'posts:post_detail' post.id as action_redirect_to %}
+    {% include 'posts/post.html' with action_redirect_url=action_redirect_to %}
+</div>
+{% endblock %}
+</body>
+</html>

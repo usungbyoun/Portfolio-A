@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  {% extends 'base.html' %}
+
+  {% load static %}
+  {% block head %}
+    <link rel="stylesheet" href="{% static 'splide/splide.css' %}">
+  {% endblock %}
+</head>
+<body>
+  {% block base_content %}
+    <main class="nav-posts-display">
+
+      {% include 'nav.html' %}
+
+      <article class="posts-base-container">
+        {% block content %}{% endblock %}
+      </article>
+    </main>
+
+    <script type="text/javascript" src="{% static 'splide/splide.js' %}"></script>
+    <script type="text/javascript" src="{% static 'splide/splide_set.js' %}"></script>
+
+  {% endblock %}
+</body>
+</html>
+
+
+</head>
+<body>

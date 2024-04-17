@@ -1,0 +1,41 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+</head>
+<body>
+ -->
+
+<nav class="posts-nav">
+    <h1>
+        <a href="{% url 'posts:feeds' %}" id="main-name">Pastagram</a>
+    </h1>
+    <ul id="ul-list-id">
+        <li id="li-list-id">
+                <a class="aside-list" href="{% url 'posts:post_add' %}">
+               <img src="{% static 'image/add_post.png' %}" class="aside-list-img">
+                    게시물 작성</a>
+        </li>
+
+        <li id="li-list-id">
+            <a class="aside-list" href="{% url 'users:profile' user_id=user.id %}">
+                {% if user.profile_image %}
+                <img src="{{ user.profile_image.url }}" class="profile-img">
+                {% else %}
+                <img src="{% static 'image/profile_default.png' %}" class="profile-img">
+                {% endif %}
+                프로필</a>
+        </li>
+        
+        <li>
+            <a class="aside-list" href="{% url 'users:logout' %}">
+            <img src="{% static 'image/logout.png' %}" class="aside-list-img">
+                로그아웃</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- </body>
+</html> -->

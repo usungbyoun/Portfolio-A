@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+venv/
+.env.prod
+.env.prod.db
+
+vanva/
+temp/
+MyPortfolio-media/
